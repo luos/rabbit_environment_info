@@ -30,7 +30,8 @@ start_link() ->
       print_arguments("Node info", [
         {node, erlang:node()},
         {cookie, erlang:get_cookie()}
-      ]),
+      ]) ++
+      print_arguments("Operating System Environment", os:getenv()) ,
     lager:error("RabbitMQ Environment: ~s~n", [RabbitmqEnv]),
     supervisor:start_link({local, ?MODULE}, ?MODULE, _Arg = []).
 
