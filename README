@@ -1,0 +1,4 @@
+## RabbitMQ Environment Info
+
+Prints command line arguments and cookie of RabbitMQ node.
+
